@@ -4,7 +4,7 @@ npm-debug.log*
 package-lock.json
 
 # CSS generated from SCSS
-css/
+# css/
 
 # PostCSS/Browserslist
 .browserslistrc
