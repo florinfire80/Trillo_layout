@@ -1,0 +1,25 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "Trillo app",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.css --style=compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "florinfire80",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.1",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.81.0"
+  }
+}
